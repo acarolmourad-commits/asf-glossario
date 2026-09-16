@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASF Glossário — Dicionário de termos do surf em português | ASF</title>
+<meta name="description" content="Glossário do surf em português: line-up, drop, swell, vaca, marolinha e dezenas de termos explicados de forma simples para quem está começando.">
+<link rel="canonical" href="https://acarolmourad-commits.github.io/asf-glossario/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ASF Glossário — Termos do surf explicados">
+<meta property="og:description" content="Entenda a linguagem do line-up: dicionário de surf com busca instantânea.">
+<meta property="og:url" content="https://acarolmourad-commits.github.io/asf-glossario/">
+<meta name="theme-color" content="#00A8CC">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"DefinedTermSet","name":"Glossário do Surf — ASF","url":"https://acarolmourad-commits.github.io/asf-glossario/","inLanguage":"pt-BR","isPartOf":{"@type":"WebSite","name":"ASF — Associação Surf Feminino","url":"https://acarolmourad-commits.github.io/asf-app/"}}
+</script>
+<style>
+:root{--primary:#00A8CC;--dark:#0E2439;--purple:#9B59B6;--bg:#F7FBFC;--gray:#5A6B7A}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Outfit',system-ui,sans-serif;background:var(--bg);color:var(--dark)}
+nav{position:sticky;top:0;background:#fff;border-bottom:1px solid #E5EEF2;padding:10px 16px;display:flex;gap:14px;flex-wrap:wrap;z-index:10;justify-content:center}
+nav a{color:var(--primary);text-decoration:none;font-weight:700;font-size:13px}
+nav a.on{color:var(--purple)}
+header{background:linear-gradient(135deg,var(--primary),var(--purple));color:#fff;padding:44px 20px 32px;text-align:center}
+header h1{font-size:clamp(22px,5vw,32px);margin:6px 0}
+header .tag{font-size:11px;letter-spacing:2px;text-transform:uppercase;opacity:.9}
+header p{opacity:.95;font-size:14px}
+.wrap{max-width:720px;margin:0 auto;padding:24px 16px 60px}
+.busca{width:100%;padding:14px 18px;font-size:16px;border:2px solid var(--primary);border-radius:14px;font-family:inherit;margin-bottom:8px}
+.muted{color:var(--gray);font-size:12.5px}
+.card{background:#fff;border-radius:14px;padding:14px 18px;margin:10px 0;box-shadow:0 2px 10px rgba(14,36,57,.06)}
+.card h2{font-size:15.5px;color:var(--primary);margin-bottom:2px}
+.card p{font-size:14px;margin:0}
+footer{text-align:center;font-size:12.5px;color:var(--gray);padding:24px;border-top:1px solid #E5EEF2}
+</style>
+</head>
+<body>
+<nav>
+<a href="https://acarolmourad-commits.github.io/asf-app/">🏄 ASF App</a>
+<a href="https://acarolmourad-commits.github.io/asf-previsao/">🌊 Previsão</a>
+<a href="https://acarolmourad-commits.github.io/asf-praias/">🏖️ Praias</a>
+<a href="https://acarolmourad-commits.github.io/asf-treino/">💪 Treino</a>
+<a href="https://acarolmourad-commits.github.io/asf-eventos/">📅 Eventos</a>
+<a class="on" href="https://acarolmourad-commits.github.io/asf-glossario/">📖 Glossário</a>
+<a href="https://acarolmourad-commits.github.io/asf-app/aprender/">📚 Guias</a>
+</nav>
+<header>
+<div class="tag">ASF · Glossário</div>
+<h1>Dicionário do surf</h1>
+<p>Os termos do line-up explicados sem tecnicismo — com busca instantânea.</p>
+</header>
+<main class="wrap">
+<input class="busca" id="busca" type="search" placeholder="🔍 Buscar termo… (ex.: drop, swell, vaca)" autocomplete="off">
+<p class="muted"><span id="total">0</span> termos</p>
+<div id="lista"></div>
+<p class="muted" style="margin-top:16px">Aprenda a aplicar na prática nos <a href="https://acarolmourad-commits.github.io/asf-app/aprender/" style="color:var(--primary)">guias ASF</a>.</p>
+</main>
+<footer>🌊 ASF — Associação Surf Feminino · <a href="https://acarolmourad-commits.github.io/asf-app/" style="color:var(--primary)">App principal</a></footer>
+<script>
+const termos=[
+['Arrebentação','Faixa perto da areia onde as ondas quebram. É onde a iniciante passa mais tempo no começo.'],
+['Backside','Surfar a onda de costas para ela (onda às suas costas). Oposto de frontside.'],
+['Batida','Queda em que a onda quebra em cima de você. Normal no aprendizado; proteja a cabeça ao emergir.'],
+['Beach break','Pico com fundo de areia, onde as ondas quebram em bancos de areia móveis. Comum no litoral norte de SP.'],
+['Bico','Parte da frente (nariz) da prancha.'],
+['Crowd','Aglomeração de surfistas no pico. Pico "crowdado" exige mais etiqueta e paciência.'],
+['Dropar','Entrar na frente de quem já está com prioridade na onda. Falta grave de etiqueta — evite!'],
+['Drop','Descida inicial da parede da onda logo após o take-off.'],
+['Frontside','Surfar a onda de frente para ela (peito voltado para a parede).'],
+['Inside','Quem está mais próximo do pico tem prioridade — estar "por dentro".'],
+['Leash','Cordinha que prende a prancha ao tornozelo. Item de segurança obrigatório.'],
+['Line-up','Área além da arrebentação onde as surfistas esperam as ondas.'],
+['Longboard','Prancha longa (9 pés ou mais), estável e clássica. Ótima para iniciantes e ondas pequenas.'],
+['Maré cheia / seca','Nível alto (cheia) ou baixo (seca) do mar; muda completamente como as ondas quebram.'],
+['Marolinha','Onda pequena e fraca. Perfeita para o primeiro dia de surf.'],
+['Outside','Região além do line-up, mais fundo; também o momento em que vem uma série maior.'],
+['Pico','Ponto exato onde a onda começa a quebrar; também usado como sinônimo de spot de surf.'],
+['Point break','Onda que quebra ao longo de uma ponta de pedra ou costeira, formando paredes longas.'],
+['Pop-up','Movimento de ficar em pé na prancha em um único gesto. Treina-se em casa, no chão.'],
+['Prioridade','Regra de quem pode pegar a onda: quem está mais próximo do pico. Respeitar é segurança.'],
+['Remada','Nado sobre a prancha — 80% do tempo no mar é remando.'],
+['Series','Conjunto de ondas maiores que chegam em sequência. Calma: entre uma série e outra há calmaria.'],
+['Softboard','Prancha de espuma, macia e super estável. A escolha certa para começar.'],
+['Swell','Ondulação gerada por ventos distantes que vira onda ao chegar na costa. Direção e tamanho do swell definem o dia.'],
+['Take-off','O momento de iniciar a descida da onda, passando da remada para o pop-up.'],
+['Tubo','Quando a onda forma um cilindro oco. Manobra avançada — um dia você chega lá!'],
+['Vaca','Queda da prancha, tombo. Todo mundo toma vaca — faz parte.'],
+['Wetsuit','Roupa de neoprene para água fria. No inverno do sudeste, 3/2mm costuma bastar.'],
+['Wind surf','Superfície do mar afetada por vento local forte, deixando as ondas bagunçadas (mar "picado").'],
+['Zarpar','Gíria para furar a arrebentação remando e chegar ao line-up.']];
+const lista=document.getElementById('lista'),total=document.getElementById('total');
+function render(q){const t=termos.filter(([n,d])=>!q||(n+' '+d).toLowerCase().includes(q));lista.innerHTML='';t.forEach(([n,d])=>lista.insertAdjacentHTML('beforeend',`<div class="card"><h2>${n}</h2><p>${d}</p></div>`));total.textContent=t.length;}
+document.getElementById('busca').oninput=e=>render(e.target.value.trim().toLowerCase());
+render('');
+</script>
+</body>
+</html>
