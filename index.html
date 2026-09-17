@@ -41,7 +41,6 @@ footer{text-align:center;font-size:12.5px;color:var(--gray);padding:24px;border-
 <a href="https://acarolmourad-commits.github.io/asf-previsao/">🌊 Previsão</a>
 <a href="https://acarolmourad-commits.github.io/asf-praias/">🏖️ Praias</a>
 <a href="https://acarolmourad-commits.github.io/asf-treino/">💪 Treino</a>
-<a href="https://acarolmourad-commits.github.io/asf-eventos/">📅 Eventos</a>
 <a class="on" href="https://acarolmourad-commits.github.io/asf-glossario/">📖 Glossário</a>
 <a href="https://acarolmourad-commits.github.io/asf-comunidade/">🤝 Comunidade</a>
 <a href="https://acarolmourad-commits.github.io/asf-seguranca/">🛟 Segurança</a>
@@ -68,8 +67,8 @@ const termos=[
 ['Beach break','Pico com fundo de areia, onde as ondas quebram em bancos de areia móveis. Comum no litoral norte de SP.'],
 ['Bico','Parte da frente (nariz) da prancha.'],
 ['Crowd','Aglomeração de surfistas no pico. Pico "crowdado" exige mais etiqueta e paciência.'],
-['Dropar','O momento exato de ficar de pé na prancha para descer a onda (o take-off). Atenção: "dropar na frente de alguém" significa rabear!'],
-['Drop','Descida inicial da parede da onda logo após o take-off.'],
+['Dropar','O momento exato em que ficamos de pé na prancha, na descida inicial da onda (o drop, logo após o take-off). Atenção: dropar na frente de alguém significa rabear — falta grave de etiqueta, evite!'],
+['Drop','Descida inicial da parede da onda; o instante em que a surfista fica de pé na prancha após o take-off.'],
 ['Frontside','Surfar a onda de frente para ela (peito voltado para a parede).'],
 ['Inside','Quem está mais próximo do pico tem prioridade — estar "por dentro".'],
 ['Leash','Cordinha que prende a prancha ao tornozelo. Item de segurança obrigatório.'],
@@ -82,7 +81,7 @@ const termos=[
 ['Point break','Onda que quebra ao longo de uma ponta de pedra ou costeira, formando paredes longas.'],
 ['Pop-up','Movimento de ficar em pé na prancha em um único gesto. Treina-se em casa, no chão.'],
 ['Prioridade','Regra de quem pode pegar a onda: quem está mais próximo do pico. Respeitar é segurança.'],
-['Rabear','Entrar na onda na frente de quem já está com prioridade ("dropar na frente"). Falta grave de etiqueta e segurança — evite!'],
+['Rabear','Dropar na frente de alguém: entrar na onda à frente de quem já está com prioridade. Falta grave de etiqueta e risco de acidente — evite!'],
 ['Remada','Nado sobre a prancha — 80% do tempo no mar é remando.'],
 ['Series','Conjunto de ondas maiores que chegam em sequência. Calma: entre uma série e outra há calmaria.'],
 ['Softboard','Prancha de espuma, macia e super estável. A escolha certa para começar.'],
@@ -90,9 +89,9 @@ const termos=[
 ['Take-off','O momento de iniciar a descida da onda, passando da remada para o pop-up.'],
 ['Tubo','Quando a onda forma um cilindro oco. Manobra avançada — um dia você chega lá!'],
 ['Vaca','Queda da prancha, tombo. Todo mundo toma vaca — faz parte.'],
+['Varar','Furar a arrebentação remando até o outside, passando por baixo ou por entre as ondas quebradas. "Varamos para o outside" = chegamos lá fora, além da quebra.'],
 ['Wetsuit','Roupa de neoprene para água fria. No inverno do sudeste, 3/2mm costuma bastar.'],
-['Wind surf','Superfície do mar afetada por vento local forte, deixando as ondas bagunçadas (mar "picado").'],
-['Zarpar','Gíria para furar a arrebentação remando e chegar ao line-up.']];
+['Wind surf','Superfície do mar afetada por vento local forte, deixando as ondas bagunçadas (mar "picado").']];
 const lista=document.getElementById('lista'),total=document.getElementById('total');
 function render(q){const t=termos.filter(([n,d])=>!q||(n+' '+d).toLowerCase().includes(q));lista.innerHTML='';t.forEach(([n,d])=>lista.insertAdjacentHTML('beforeend',`<div class="card"><h2>${n}</h2><p>${d}</p></div>`));total.textContent=t.length;}
 document.getElementById('busca').oninput=e=>render(e.target.value.trim().toLowerCase());
