@@ -34,6 +34,9 @@ header p{opacity:.95;font-size:14px}
 .card p{font-size:14px;margin:0}
 footer{text-align:center;font-size:12.5px;color:var(--gray);padding:24px;border-top:1px solid #E5EEF2}
 </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"O que é line-up no surf?","acceptedAnswer":{"@type":"Answer","text":"Line-up é a área além da arrebentação onde as surfistas esperam as ondas. É lá que vale a etiqueta de prioridade: quem está mais perto do pico tem preferência."}},{"@type":"Question","name":"O que é dropar alguém no surf?","acceptedAnswer":{"@type":"Answer","text":"Dropar (rabear) é ficar de pé na onda na frente de quem já tem prioridade — falta grave de etiqueta e causa de acidentes. Confira sempre os dois lados antes do drop."}},{"@type":"Question","name":"O que significa swell no surf?","acceptedAnswer":{"@type":"Answer","text":"Swell é a ondulação gerada por ventos distantes que viaja pelo oceano até chegar à costa como ondas organizadas. Direção, tamanho e período do swell definem como cada praia vai quebrar."}},{"@type":"Question","name":"O que é marolinha?","acceptedAnswer":{"@type":"Answer","text":"Marolinha é a gíria brasileira para mar com ondas pequenas e fracas. É o cenário ideal para iniciantes praticarem remada, pop-up e leitura de ondas com segurança."}}]}
+</script>
 </head>
 <body>
 <nav>
@@ -53,6 +56,7 @@ footer{text-align:center;font-size:12.5px;color:var(--gray);padding:24px;border-
 <p>Os termos do line-up explicados sem tecnicismo — com busca instantânea.</p>
 </header>
 <main class="wrap">
+<div class="card" style="border-top:4px solid var(--primary)"><h2>📌 Termo do ciclo <span style="font-size:11px;background:var(--primary);color:#fff;padding:2px 8px;border-radius:12px;vertical-align:middle">renova a cada 5 dias</span></h2><p id="tc-t" style="font-weight:700;font-size:16px;color:var(--dark)">…</p><p id="tc-d" class="muted" style="font-size:14px;margin-top:4px">…</p><p id="tc-em" class="muted" style="font-size:11px;margin-top:6px"></p></div>
 <input class="busca" id="busca" type="search" placeholder="🔍 Buscar termo… (ex.: drop, swell, vaca)" autocomplete="off">
 <p class="muted"><span id="total">0</span> termos</p>
 <div id="lista"></div>
@@ -122,6 +126,18 @@ render('');
   }
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',injectNav);}else{injectNav();}
 })();
+</script>
+<script>
+/* Termo do ciclo: muda automaticamente a cada 5 dias, usando a lista da própria página */
+try{
+const CICLO=5*24*60*60*1000;
+const idx=Math.floor(Date.now()/CICLO);
+const par=termos[idx%termos.length];
+document.getElementById('tc-t').textContent=par[0];
+document.getElementById('tc-d').textContent=par[1];
+const dias=Math.ceil((CICLO-(Date.now()%CICLO))/(24*60*60*1000));
+document.getElementById('tc-em').textContent='🔄 Novo termo em '+dias+(dias===1?' dia':' dias')+' · '+termos.length+' termos no dicionário';
+}catch(e){}
 </script>
 </body>
 </html>
